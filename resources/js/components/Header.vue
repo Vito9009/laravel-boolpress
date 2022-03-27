@@ -1,7 +1,12 @@
 <template>
-  <div>
-    HEADER
-  </div>
+  <header>
+    <nav>
+      <ul>
+        <li><router-link :to="{name: 'home'}">HOME</router-link></li>
+        <li><router-link :to="{name: 'about'}">CHI SIAMO</router-link></li>
+      </ul>
+    </nav>
+  </header>
 </template>
 
 <script>
