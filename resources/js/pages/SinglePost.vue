@@ -1,14 +1,16 @@
 <template>
-    <div>
+    <div class="container">
         <img v-if="post.image" :src="`/storage/${post.image}`" :alt="post.title">
-        <h3>{{post.title}}</h3>
-        <p>{{post.content}}</p>
-        <div v-if="post.category">{{post.category.name}}</div>
-        <div v-if="post.tags.length > 0">
-            <ul>
-                <li v-for="tag in post.tags" :key="tag.id">{{tag.name}}</li>
-            </ul>
+        <div class="category">
+            <span v-if="post.category"><b>Category:</b> </span>
+            <span v-if="post.category">{{post.category.name}} </span>
         </div>
+        <div class="tags" v-if="post.tags.length > 0">
+              <span><b>Tags:</b> </span>
+              <span v-for="tag in post.tags" :key="tag.id">{{tag.name}} </span>
+        </div>
+        <h1>{{post.title}}</h1>
+        <p>{{post.content}}</p>
     </div>
 </template>
 
@@ -31,5 +33,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0;
 
+    img{
+        margin-bottom: 20px;
+    }
+
+    h1{
+        margin: 20px 0;
+    }
+
+    .category, .tags{
+        margin: 5px 0;
+    }
+}
 </style>
