@@ -3,11 +3,11 @@
         <img v-if="post.image" :src="`/storage/${post.image}`" :alt="post.title">
         <div class="category">
             <span v-if="post.category"><b>Category:</b> </span>
-            <span v-if="post.category">{{post.category.name}} </span>
+            <span class="name-category" v-if="post.category">{{post.category.name}} </span>
         </div>
         <div class="tags" v-if="post.tags.length > 0">
               <span><b>Tags:</b> </span>
-              <span v-for="tag in post.tags" :key="tag.id">{{tag.name}} </span>
+              <span class="name-tag" v-for="tag in post.tags" :key="tag.id">{{tag.name}} </span>
         </div>
         <h1>{{post.title}}</h1>
         <p>{{post.content}}</p>
@@ -50,6 +50,22 @@ export default {
 
     .category, .tags{
         margin: 5px 0;
+
+        .name-tag, .name-category{
+            padding: 3px 5px;
+            margin: 0 5px;
+            border-radius: 5px;
+            color: rgb(255, 255, 255);
+        }
+
+        .name-tag{
+            background-color: rgb(0, 119, 255);
+            
+        }
+
+        .name-category{
+            background-color: rgb(0, 85, 170);
+        }
     }
 }
 </style>

@@ -7,14 +7,14 @@
           <div class="info-card-post">
                 <h3>{{post.title}}</h3>
                 <p>{{post.content}}</p>
-                <div>
+                <div class="category">
                     <span v-if="post.category"><b>Category:</b> </span>
-                    <span v-if="post.category">{{post.category.name}} </span>
+                    <span class="name-category" v-if="post.category">{{post.category.name}} </span>
                 </div>
                 
-                <div v-if="post.tags.length > 0">
+                <div class="tags" v-if="post.tags.length > 0">
                     <span><b>Tags:</b> </span>
-                    <span v-for="tag in post.tags" :key="tag.id">{{tag.name}} </span>
+                    <span class="name-tag" v-for="tag in post.tags" :key="tag.id">{{tag.name}} </span>
                 </div>
 
                 <router-link class="router-link" :to="{name: 'single-post', params: {slug: post.slug}}">Leggi l'intero post</router-link>
@@ -68,6 +68,24 @@ export default {
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
+                }
+
+                .category, .tags{
+                    .name-tag, .name-category{
+                        padding: 3px 5px;
+                        margin: 0 5px;
+                        border-radius: 5px;
+                        color: rgb(255, 255, 255);
+                    }
+
+                    .name-tag{
+                        background-color: rgb(0, 119, 255);
+                        
+                    }
+
+                    .name-category{
+                        background-color: rgb(0, 85, 170);
+                    }
                 }
 
                 .router-link{

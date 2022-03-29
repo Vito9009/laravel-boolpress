@@ -2620,7 +2620,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".container[data-v-4ac4d2f8] {\n  display: flex;\n  flex-wrap: wrap;\n  margin: 50px 0;\n}\n.container .card-post[data-v-4ac4d2f8] {\n  margin: 30px 20px;\n  width: calc(25% - 40px);\n  height: 500px;\n  background-color: white;\n}\n.container .card-post img[data-v-4ac4d2f8] {\n  width: 100%;\n  height: 40%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.container .card-post .info-card-post[data-v-4ac4d2f8] {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  height: 60%;\n  width: 80%;\n  margin: 0 auto;\n}\n.container .card-post .info-card-post p[data-v-4ac4d2f8] {\n  width: 100%;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.container .card-post .info-card-post .router-link[data-v-4ac4d2f8] {\n  text-decoration: none;\n  color: #0055aa;\n  font-weight: bold;\n  padding: 10px;\n  border-radius: 10px;\n  border: 0px;\n  background-color: #ebebeb;\n  text-align: center;\n}", ""]);
+exports.push([module.i, ".container[data-v-4ac4d2f8] {\n  display: flex;\n  flex-wrap: wrap;\n  margin: 50px 0;\n}\n.container .card-post[data-v-4ac4d2f8] {\n  margin: 30px 20px;\n  width: calc(25% - 40px);\n  height: 500px;\n  background-color: white;\n}\n.container .card-post img[data-v-4ac4d2f8] {\n  width: 100%;\n  height: 40%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.container .card-post .info-card-post[data-v-4ac4d2f8] {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  height: 60%;\n  width: 80%;\n  margin: 0 auto;\n}\n.container .card-post .info-card-post p[data-v-4ac4d2f8] {\n  width: 100%;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.container .card-post .info-card-post .category .name-tag[data-v-4ac4d2f8], .container .card-post .info-card-post .category .name-category[data-v-4ac4d2f8], .container .card-post .info-card-post .tags .name-tag[data-v-4ac4d2f8], .container .card-post .info-card-post .tags .name-category[data-v-4ac4d2f8] {\n  padding: 3px 5px;\n  margin: 0 5px;\n  border-radius: 5px;\n  color: white;\n}\n.container .card-post .info-card-post .category .name-tag[data-v-4ac4d2f8], .container .card-post .info-card-post .tags .name-tag[data-v-4ac4d2f8] {\n  background-color: #0077ff;\n}\n.container .card-post .info-card-post .category .name-category[data-v-4ac4d2f8], .container .card-post .info-card-post .tags .name-category[data-v-4ac4d2f8] {\n  background-color: #0055aa;\n}\n.container .card-post .info-card-post .router-link[data-v-4ac4d2f8] {\n  text-decoration: none;\n  color: #0055aa;\n  font-weight: bold;\n  padding: 10px;\n  border-radius: 10px;\n  border: 0px;\n  background-color: #ebebeb;\n  text-align: center;\n}", ""]);
 
 // exports
 
@@ -2658,7 +2658,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".container[data-v-67cb3b51] {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  margin: 100px 0;\n}\n.container img[data-v-67cb3b51] {\n  margin-bottom: 20px;\n}\n.container h1[data-v-67cb3b51] {\n  margin: 20px 0;\n}\n.container .category[data-v-67cb3b51], .container .tags[data-v-67cb3b51] {\n  margin: 5px 0;\n}", ""]);
+exports.push([module.i, ".container[data-v-67cb3b51] {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  margin: 100px 0;\n}\n.container img[data-v-67cb3b51] {\n  margin-bottom: 20px;\n}\n.container h1[data-v-67cb3b51] {\n  margin: 20px 0;\n}\n.container .category[data-v-67cb3b51], .container .tags[data-v-67cb3b51] {\n  margin: 5px 0;\n}\n.container .category .name-tag[data-v-67cb3b51], .container .category .name-category[data-v-67cb3b51], .container .tags .name-tag[data-v-67cb3b51], .container .tags .name-category[data-v-67cb3b51] {\n  padding: 3px 5px;\n  margin: 0 5px;\n  border-radius: 5px;\n  color: white;\n}\n.container .category .name-tag[data-v-67cb3b51], .container .tags .name-tag[data-v-67cb3b51] {\n  background-color: #0077ff;\n}\n.container .category .name-category[data-v-67cb3b51], .container .tags .name-category[data-v-67cb3b51] {\n  background-color: #0055aa;\n}", ""]);
 
 // exports
 
@@ -4125,26 +4125,31 @@ var render = function () {
               _vm._v(" "),
               _c("p", [_vm._v(_vm._s(post.content))]),
               _vm._v(" "),
-              _c("div", [
+              _c("div", { staticClass: "category" }, [
                 post.category
                   ? _c("span", [_c("b", [_vm._v("Category:")])])
                   : _vm._e(),
                 _vm._v(" "),
                 post.category
-                  ? _c("span", [_vm._v(_vm._s(post.category.name) + " ")])
+                  ? _c("span", { staticClass: "name-category" }, [
+                      _vm._v(_vm._s(post.category.name) + " "),
+                    ])
                   : _vm._e(),
               ]),
               _vm._v(" "),
               post.tags.length > 0
                 ? _c(
                     "div",
+                    { staticClass: "tags" },
                     [
                       _vm._m(0, true),
                       _vm._v(" "),
                       _vm._l(post.tags, function (tag) {
-                        return _c("span", { key: tag.id }, [
-                          _vm._v(_vm._s(tag.name) + " "),
-                        ])
+                        return _c(
+                          "span",
+                          { key: tag.id, staticClass: "name-tag" },
+                          [_vm._v(_vm._s(tag.name) + " ")]
+                        )
                       }),
                     ],
                     2
@@ -4275,7 +4280,9 @@ var render = function () {
         : _vm._e(),
       _vm._v(" "),
       _vm.post.category
-        ? _c("span", [_vm._v(_vm._s(_vm.post.category.name) + " ")])
+        ? _c("span", { staticClass: "name-category" }, [
+            _vm._v(_vm._s(_vm.post.category.name) + " "),
+          ])
         : _vm._e(),
     ]),
     _vm._v(" "),
@@ -4287,7 +4294,7 @@ var render = function () {
             _vm._m(0),
             _vm._v(" "),
             _vm._l(_vm.post.tags, function (tag) {
-              return _c("span", { key: tag.id }, [
+              return _c("span", { key: tag.id, staticClass: "name-tag" }, [
                 _vm._v(_vm._s(tag.name) + " "),
               ])
             }),
